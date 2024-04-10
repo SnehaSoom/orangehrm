@@ -1,0 +1,48 @@
+/* Sidebar.css */
+.sidebarContainer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 300px;
+  height: 100%;
+  background-color: white;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Logo styling */
+.logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Menu item styling */
+.menu-items {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.icon {
+  margin-right: 10px;
+  width: 24px; /* Adjust according to your icon size */
+  height: 24px; /* Adjust according to your icon size */
+}

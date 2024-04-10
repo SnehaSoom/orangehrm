@@ -1,0 +1,8 @@
+.header {
+  background-color: #fa7119;
+  padding: 15px;
+  color: white;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
