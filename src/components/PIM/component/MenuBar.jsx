@@ -47,7 +47,7 @@ export default function MenuBar({ onSelectChange, onButtonClick }) {
 
 
 export const RenderMenu = ({ menuList, onSelectChange, onButtonClick }) => {
-  const [selectedItem, setSelectedItem] = useState(null);
+  const [selectedItem, setSelectedItem] = useState('employeeList');
 
   const handleSelectChange = (event) => {
     const { name, value } = event.target;

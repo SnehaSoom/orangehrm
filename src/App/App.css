@@ -3,3 +3,13 @@
   height: 100vh;
 }
 
+.page-layout{
+  width: 100%;
+  background-color: white;
+  /* border: 1px solid black; */
+  border-radius: 20px;
+  height: calc(100vh - 140px);
+  overflow-y: auto;
+  margin-top: 10px;
+}
+
