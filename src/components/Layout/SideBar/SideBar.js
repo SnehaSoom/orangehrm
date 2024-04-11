@@ -1,40 +1,51 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import SearchIcon from "./Assest/SearchIcon.svg";
-import AdminIcon from "./Assest/AdminIcon.svg";
-import PimIcon from "./Assest/PimIcon.svg";
+import { Search, AdminIcon, PimIcon,LeftIcon } from "./../../../App/Assests";
 import "./SideBar.css";
 
 const menuItems = [
-  { text: "Search", icon: <SearchIcon />, link: "/search" },
-  { text: "Admin", icon: <AdminIcon />, link: "/admin" },
-  { text: "PIM", icon: <PimIcon />, link: "/pim" },
-    // { text: "Leave", icon: <LeaveIcon /> },
-    // { text: "Time", icon: <TimeIcon /> },
-    // { text: "My Info", icon: <MyInfoIcon /> },
-    // { text: "Dashboard", icon: <DashboardIcon /> },
-    // { text: "Directory", icon: <DirectoryIcon /> },
-    // { text: "Maintenance", icon: <MaintenanceIcon /> },
-    // { text: "Buzz", icon: <BuzzIcon /> },
+  { text: "Search", icon: <Search color="gray" size={25} />, link: "/search" },
+  { text: "Admin", icon: <AdminIcon color="gray" size={25} />, link: "/admin" },
+  { text: "PIM", icon: <PimIcon color="gray" size={25} />, link: "/pim" },
+  { text: "Leave", icon: <icon /> },
+  { text: "Time", icon: <icon /> },
+  { text: "My Info", icon: <icon /> },
+  { text: "Dashboard", icon: <icon /> },
+  { text: "Directory", icon: <icon /> },
+  { text: "Maintenance", icon: <icon /> },
+  { text: "Buzz", icon: <icon /> },
 ];
 
-const SideBar = () => {
+const SideBar = ({
+  activeIndex,
+  onClick,
+  onClose,
+}) => {
   const navigate = useNavigate();
   return (
     <div className="sidebarContainer">
       <div className="sidebar">
         <div className="sidebarLogo">
-          LOGO
-          {/* <img src="logo.png" alt="Logo" /> */}
+          <span>OrangeHRM</span>
         </div>
-        <ul className="menu-items">
-          {menuItems.map((item, index) => (
-            <li className="menu-item" key={index} onClick={()=> navigate(item.link)}>
-              <span className={`icon ${item.icon}`} />
-              <span className="text">{item.text}</span>
-            </li>
-          ))}
-        </ul>
+        <div className="sidebarMenu">
+          <ul className="menu-items">
+            {menuItems.map((item, index) => (
+              <li className={activeIndex === index ? "menu-item-active" : "menu-item"} key={index} onClick={() => {
+                onClick(index);
+                navigate(item.link)
+              }}>
+                <span className={`icon`}>
+                  {item.icon}
+                </span>
+                <span className="text">{item.text}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <button className="close-button" onClick={() => onClose()}>
+          <LeftIcon/>
+        </button>
       </div>
     </div>
   );

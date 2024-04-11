@@ -3,7 +3,8 @@ import "./MainContainer.css";
 
 const MainContainer = () => {
   return (
-    <div className="main-container">
+    
+<div className="main-container">
       <div className="main-header">
         <h2>Main Content</h2>
         <hr />
@@ -44,8 +45,9 @@ const MainContainer = () => {
         </div>
       </div>
       <hr />
-    </div>
+//     </div>
   );
 };
 
 export default MainContainer;
+

@@ -1,0 +1,72 @@
+.pim-menu-bar {
+    background-color: white;
+    margin-left: -50px;
+    margin-right: -30px;
+    padding-left: 50px;
+    display: flex;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+
+.pim-selected {
+    background-color: rgba(236, 190, 104, 0.281);
+    color: orange;
+    font-weight: 500;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.pim-menu-button {
+    background-color: #e0e0e02d;
+    color: rgb(145, 138, 138);
+    border: none;
+    padding: 5px 12px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.pim-select-container {
+    /* margin-bottom: 10px; */
+}
+
+.pim-select-container select {
+    width: 200px;
+    padding: 5px;
+}
+
+.pim-select-container select.pim-selected {
+    background-color: rgba(236, 190, 104, 0.281);
+    color: orange;
+    font-weight: 500;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.pim-select-container select option {
+    background-color: white;
+    padding: 15px 12px;
+}
+
+.pim-select-container select option:hover {
+    background-color: lightgray;
+}
