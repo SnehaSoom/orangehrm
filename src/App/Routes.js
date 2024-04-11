@@ -5,6 +5,7 @@ import LoginIndex from '../components/Authentication/Login';
 import SignUpIndex from '../components/Authentication/SignUp';
 import LayoutIndex from '../components/Layout';
 import NotFound from './NotFound';
+import MainContainer from '../components/MainContainer/MainContainer';
 
 export default function Routers() {
 
@@ -17,6 +18,9 @@ export default function Routers() {
                     <Route path="*" element={<NotFound/>} />
                     <Route path="/" element={<LayoutIndex />}>
                         <Route path="/" element={<h1>Home</h1>} />
+                        <Route path="/search" element={<LoginIndex />} />
+                        <Route path="/admin" element={<LoginIndex />} />
+                        <Route path="/pim" element={<MainContainer />} />
                     </Route>
                 </Routes>
             </BrowserRouter>
