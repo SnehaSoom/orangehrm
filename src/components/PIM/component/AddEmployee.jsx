@@ -1,22 +1,58 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PageLayout from '../../Reusaable/PageLayout';
 
 const AddEmployee = () => {
+  const [selectedFile, setSelectedFile] = useState(null);
+  // Default male avatar image URL
+  const defaultImageUrl = '/profilePic.png';
+
+  // Function to handle file selection
+  const handleFileChange = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      setSelectedFile(URL.createObjectURL(file));
+    }
+  };
+
+
+  // Function to handle upload button click
+  const handleUpload = () => {
+    // Logic to upload the selected file
+    console.log("Uploading profile picture:", selectedFile);
+  };
   return (
     <PageLayout>
-      <div style={{ backgroundColor: '#f0f0f0', padding: '20px', borderRadius: '5px' }}>
-        <div style={{ textAlign: 'center', marginBottom: '20px' }}>
-          <h2>Main Content</h2>
-          <hr />
+      <div>
+        <div className='add-employee-container-header'>
+          <h3>Add Employee</h3>
+          <hr color='#e1e3e1' />
         </div>
-        <div style={{ display: 'flex' }}>
-          <div style={{ flex: 1, marginRight: '20px' }}>
-            <h3>Photo Upload</h3>
-            {/* Photo uploading functionality */}
-            <div>
-              <label htmlFor="photo">Upload Photo:</label>
-              <input type="file" id="photo" name="photo" accept="image/*" />
+        <div className='add-employee-container'>
+          <div className='upload-pic-container'>
+            <div className='upload-pic'>
+              <div className="preview-container">
+                <div className="preview">
+                  {selectedFile ? (
+                    <img src={selectedFile} alt="Selected" />
+                  ) : (
+                    <img src={defaultImageUrl} alt="Default" />
+                  )}
+                  {/* <button onClick={handleUpload}>Upload Profile Pic</button> */}
+                </div>
+                <div className='upload-btn'>
+                  <label htmlFor="photo">+</label>
+                  <input type="file" id="photo" name="photo" accept="image/*" onChange={handleFileChange} />
+                </div>
+              </div>
             </div>
+            <div style={{
+              display: 'flex', justifyContent: 'center', padding: '20px', textAlign: 'center'
+            }}>
+              <span style={{ fontSize: '10px', color: 'gray' }}>Accepts jpg, png, .gif up to 1MB. Recommended
+                dimensions: 200px X 200px</span>
+            </div>
+          </div>
+          <div>
             <h3>Personal Information</h3>
             {/* Personal information fields */}
             <div>
@@ -40,13 +76,18 @@ const AddEmployee = () => {
               <input type="checkbox" id="toggle" name="toggle" />
             </div>
           </div>
-          <div style={{ flex: 1 }}>
-            {/* Right content */}
+        </div>
+        <hr color='#e1e3e1' style={{marginTop : '50px'}} />
+        <div style={{marginTop : '10px', paddingLeft : '20px', paddingRight : '20px', display: 'flex', justifyContent : 'space-between'}}>
+          <span>* Required</span>
+          <div>
+            <button style={{padding : '10px 25px 10px 25px', color : 'green', border : '1px solid green', borderRadius : '20px'}}>Cancel</button>
+            &nbsp;&nbsp;&nbsp;
+            <button style={{padding : '10px 25px 10px 25px', color : 'white', backgroundColor : 'green', border : '1px solid green', borderRadius : '20px'}}>Save</button>
           </div>
         </div>
-        <hr />
       </div>
-    </PageLayout>
+    </PageLayout >
   );
 };
 
