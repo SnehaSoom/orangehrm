@@ -7,13 +7,13 @@ const menuItems = [
   { text: "Search", icon: <Search color="gray" size={25} />, link: "/search" },
   { text: "Admin", icon: <AdminIcon color="gray" size={25} />, link: "/admin" },
   { text: "PIM", icon: <PimIcon color="gray" size={25} />, link: "/pim" },
-  { text: "Leave", icon: <icon /> },
-  { text: "Time", icon: <icon /> },
-  { text: "My Info", icon: <icon /> },
-  { text: "Dashboard", icon: <icon /> },
-  { text: "Directory", icon: <icon /> },
-  { text: "Maintenance", icon: <icon /> },
-  { text: "Buzz", icon: <icon /> },
+  { text: "Leave", icon: <AdminIcon color="gray" size={25} />, link: "/leave" }, // Example link for "Leave"
+  { text: "Time", icon: <AdminIcon color="gray" size={25} />, link: "/time" }, // Example link for "Time"
+  { text: "My Info", icon: <AdminIcon color="gray" size={25} />, link: "/my-info" }, // Example link for "My Info"
+  { text: "Dashboard", icon: <AdminIcon color="gray" size={25} />, link: "/dashboard" }, // Example link for "Dashboard"
+  { text: "Directory", icon: <AdminIcon color="gray" size={25} />, link: "/directory" }, // Example link for "Directory"
+  { text: "Maintenance", icon: <AdminIcon color="gray" size={25} />, link: "/maintenance" }, // Example link for "Maintenance"
+  { text: "Buzz", icon: <AdminIcon color="gray" size={25} />, link: "/buzz" }, // Example link for "Buzz"
 ];
 
 const SideBar = ({

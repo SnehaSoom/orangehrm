@@ -3,7 +3,7 @@
   height: 100vh;
 }
 
-.page-layout{
+.page-layout {
   width: 100%;
   background-color: white;
   /* border: 1px solid black; */
@@ -13,3 +13,83 @@
   margin-top: 10px;
 }
 
+/* .profile-menu-container{
+ 
+} */
+
+
+
+.profile-sidebar-main-container{
+  display: flex;
+  height: 100%;
+}
+
+.profile-sidebar-container{
+  width: 200px;
+  height: 100%;
+  border-right: 1px solid rgb(214, 211, 211);
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.profile-sidebar-container {
+  /* Hide scrollbar for Firefox */
+  scrollbar-width: none;
+  /* Hide scrollbar for other browsers */
+  -ms-overflow-style: none;
+}
+
+.profile-sidebar-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari, and Edge */
+}
+
+.profileList{
+  margin-bottom: 10px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 25px;
+  /* box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px; */
+  color: gray;
+  font-weight: 500;
+}
+
+.profileList-selected {
+  margin-bottom: 10px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.075) 0px 6px 24px 0px, rgba(0, 0, 0, 0.137) 0px 0px 0px 1px;
+  color: gray;
+  background-color: rgba(190, 188, 188, 0.075);
+  font-weight: 500;
+}
+
+.profileList:hover {
+  margin-bottom: 10px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.075) 0px 6px 24px 0px, rgba(0, 0, 0, 0.137) 0px 0px 0px 1px;
+  color: gray;
+  background-color: rgba(190, 188, 188, 0.075);
+  font-weight: 500;
+}
+
+.profile-dp-container{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-dp-name h3 {
+  color: gray;
+}
+
+.profile-dp{
+  width: 150px;
+  height: 150px;
+  /* border: 1px solid gray; */
+  border-radius: 50%;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
