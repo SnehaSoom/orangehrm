@@ -126,7 +126,17 @@
 .icon {
   margin-right: 10px;
   width: 24px;
+  color: gray;
   /* Adjust according to your icon size */
   height: 24px;
   /* Adjust according to your icon size */
+}
+
+.selected-icon {
+  margin-right: 10px;
+  width: 24px;
+  color: white;
+  /* Adjust according to your icon size */
+  height: 24px;
+
 }
