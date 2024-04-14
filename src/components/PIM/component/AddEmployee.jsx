@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PageLayout from '../../Reusaable/PageLayout';
+import SwitchCheckbox from '../../Reusaable/SwitchCheckbox';
 
 const AddEmployee = () => {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -53,37 +54,31 @@ const AddEmployee = () => {
             </div>
           </div>
           <div>
-            <h3>Personal Information</h3>
-            {/* Personal information fields */}
-            <div>
-              <label htmlFor="fullName">Full Name:</label>
-              <input type="text" id="fullName" name="fullName" />
+            <label htmlFor="fullName">Full Name :</label>
+            <div className='triple-input'>
+              <input type="text" id="fullName" placeholder='Full Name' name="fullName" />
+              <input type="text" id="middleName" placeholder='Middle Name' name="middleName" />
+              <input type="text" id="lastName" placeholder='Last Name' name="lastName" />
             </div>
-            <div>
-              <label htmlFor="middleName">Middle Name:</label>
-              <input type="text" id="middleName" name="middleName" />
+            <div style={{marginTop : '20px'}}>
+              <label style={{marginTop: '10px'}} htmlFor="employeeId">Employee ID :</label>
+              <div style={{marginTop: '10px'}}>
+                <input type="text" id="employeeId" placeholder='Employee Id' name="employeeId" />
+              </div>
             </div>
-            <div>
-              <label htmlFor="lastName">Last Name:</label>
-              <input type="text" id="lastName" name="lastName" />
-            </div>
-            <div>
-              <label htmlFor="employeeId">Employee ID:</label>
-              <input type="text" id="employeeId" name="employeeId" />
-            </div>
-            <div>
-              <label htmlFor="toggle">Toggle:</label>
-              <input type="checkbox" id="toggle" name="toggle" />
+            <div style={{marginTop: '10px', display : 'flex', alignItems : 'center'}}>
+              <label style={{marginRight: '10px'}} htmlFor="toggle">Create Login Detail </label>
+              <SwitchCheckbox/>
             </div>
           </div>
         </div>
-        <hr color='#e1e3e1' style={{marginTop : '50px'}} />
-        <div style={{marginTop : '10px', paddingLeft : '20px', paddingRight : '20px', display: 'flex', justifyContent : 'space-between'}}>
-          <span>* Required</span>
+        <hr color='#e1e3e1' style={{ marginTop: '50px' }} />
+        <div style={{ marginTop: '10px', paddingLeft: '20px', paddingRight: '20px', display: 'flex', justifyContent: 'space-between' }}>
+          <span style={{ fontSize: '14px' }}>* Required</span>
           <div>
-            <button style={{padding : '10px 25px 10px 25px', color : 'green', border : '1px solid green', borderRadius : '20px'}}>Cancel</button>
+            <button style={{ cursor: 'pointer', padding: '10px 25px 10px 25px', color: 'green', border: '1px solid green', borderRadius: '20px' }}>Cancel</button>
             &nbsp;&nbsp;&nbsp;
-            <button style={{padding : '10px 25px 10px 25px', color : 'white', backgroundColor : 'green', border : '1px solid green', borderRadius : '20px'}}>Save</button>
+            <button style={{ cursor: 'pointer', padding: '10px 25px 10px 25px', color: 'white', backgroundColor: 'green', border: '1px solid green', borderRadius: '20px' }}>Save</button>
           </div>
         </div>
       </div>
